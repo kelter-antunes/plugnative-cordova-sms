@@ -43,7 +43,7 @@ safesmsExport.enableIntercept = function(on_off, successCallback, failureCallbac
 
 safesmsExport.sendSMS = function(address, text, successCallback, failureCallback) {
 	if( Object.prototype.toString.call( address ) === '[object Array]' ) {
-		// ok
+		numbers = address;
 	} else if(typeof address === 'string') {
 		numbers = [ address ];
 	} else {
